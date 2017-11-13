@@ -1,0 +1,9 @@
+Historia
+Cual de estos es un paradigma de 
+Programacion Orientada a
+Objetos?
+a. Imperativo 
+b. Declarativo
+c. Logico
+d. Abierto & Cerrado
+d
