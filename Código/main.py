@@ -52,8 +52,16 @@ def game():
     #Al ser varias casillas, este sera un arreglo de posiciones
     casilla = [casillas.Casilla((90,440)),casillas.Casilla((205,380)),
 			   casillas.Casilla((260,260)),casillas.Casilla((220,170)),
-			   casillas.Casilla((160,75)),casillas.Casilla((160,75))
-			   ]
+			   casillas.Casilla((160,75)),casillas.Casilla((261,2)),
+			   casillas.Casilla((369,70)),casillas.Casilla((495,2)),
+			   casillas.Casilla((610,70)),casillas.Casilla((525,160)),
+			   casillas.Casilla((455,235)),casillas.Casilla((476,350)),
+			   casillas.Casilla((565,427)),casillas.Casilla((683,400)),
+			   casillas.Casilla((750,325)),casillas.Casilla((785,210)),
+			   casillas.Casilla((840,120)),casillas.Casilla((906,24)),
+			   casillas.Casilla((1020,5)),casillas.Casilla((1105,80)),
+			   casillas.Casilla((1110,175)),casillas.Casilla((1110,285)),
+			   casillas.Casilla((1112,430))]
 			   
     #Crea el objeto pregunta, donde se leen las mismas
     preguntas = pregunta.Pregunta()
@@ -79,20 +87,24 @@ def game():
         if jugando:
 			
 			#'Blit' del tablero, dado y ficha
+			fuente = pygame.font.Font('fuentes/fuente.ttf', 30)
+			ficha_puntos = fuente.render("Puntos: " + str(ficha.puntos), 1 ,(255,255,255))
+			
+			
 			screen.blit(background_image, (0,0))
 			screen.blit(dado.image,dado.rect)
 			screen.blit(ficha.image,ficha.rect)			
+			screen.blit(ficha_puntos, (80, 680))
 			"""dado.image = dado.imagenes[0]"""
-			
-			cont = 0
 			aux=0
+			cont = 0
 			aux2=0
-			#Si se presiona la tecla '', se tira el dado
+			#Si se presiona la tecla 't', se tira el dado
 			
 			if teclas[K_t]:
 				#Modifica el valor del dado
 				contador = 0
-				dado.valor = random.randint(1,4)
+				dado.valor = random.randint(1,1)
 				dado.image = dado.imagenes[dado.valor]
 				aux = dado.valor
 				cont = cont + 1
@@ -102,6 +114,7 @@ def game():
 			
 			if cont!=1:
 				aux2=aux + dado.valor
+				
 			else:
 				aux2=aux2
 			
@@ -117,33 +130,34 @@ def game():
 				
 	elif preguntando:
 			#Leer la pregunta
-			auxiliar = preguntas.leerPregunta('preguntas/pregunta_1.txt')
+			auxiliar = preguntas.leerPregunta('preguntas/conceptos/pregunta_5.txt')
 			#Carga el cuadro de pregunta
 			cuadro_image = util.cargar_imagen('preguntas/cuadro.png')
 			fuente = pygame.font.Font('fuentes/fuente.ttf', 45)
-			#Se muestra el texto de la misma
-			tipo_pregunta = fuente.render(auxiliar[0],1,(1,1,1))
-			texto_1 = fuente.render(auxiliar[1],1,(1,1,1))
-			texto_2 = fuente.render(auxiliar[2],1,(1,1,1))
-			texto_3 = fuente.render(auxiliar[3],1,(1,1,1))
-			opc_a = fuente.render(auxiliar[4],1,(1,1,1))
-			opc_b = fuente.render(auxiliar[5],1,(1,1,1))
-			opc_c = fuente.render(auxiliar[6],1,(1,1,1))
-			opc_d = fuente.render(auxiliar[7],1,(1,1,1))
+			tipo_pregunta = fuente.render(auxiliar[0][:-1],1,(1,1,1))
+			fuente = pygame.font.Font('fuentes/fuente.ttf', int(auxiliar[28]))
+			texto_1 = fuente.render(auxiliar[1][:-1],1,(1,1,1))
+			texto_2 = fuente.render(auxiliar[2][:-1],1,(1,1,1))
+			texto_3 = fuente.render(auxiliar[3][:-1],1,(1,1,1))
+			fuente = pygame.font.Font('fuentes/fuente.ttf', int(auxiliar[29]))
+			opc_a = fuente.render(auxiliar[4][:-1],1,(1,1,1))
+			opc_b = fuente.render(auxiliar[5][:-1],1,(1,1,1))
+			opc_c = fuente.render(auxiliar[6][:-1],1,(1,1,1))
+			opc_d = fuente.render(auxiliar[7][:-1],1,(1,1,1))
 			#Se hace un blit de todo
 			screen.blit(cuadro_image,(220,45))
 			screen.blit(tipo_pregunta,(240,65))
-			screen.blit(texto_1,(340,110))
-			screen.blit(texto_2,(410,150))
-			screen.blit(texto_3,(540,190))
-			screen.blit(opc_a,(240,270))
-			screen.blit(opc_b,(670,270))
-			screen.blit(opc_c,(280,380))
-			screen.blit(opc_d,(630,380))
+			screen.blit(texto_1,(int(auxiliar[9]),int(auxiliar[10])))
+			screen.blit(texto_2,(int(auxiliar[11]),int(auxiliar[12])))
+			screen.blit(texto_3,(int(auxiliar[13]),int(auxiliar[14])))
+			screen.blit(opc_a,(int(auxiliar[16]),int(auxiliar[17])))
+			screen.blit(opc_b,(int(auxiliar[19]),int(auxiliar[20])))
+			screen.blit(opc_c,(int(auxiliar[22]),int(auxiliar[23])))
+			screen.blit(opc_d,(int(auxiliar[25]),int(auxiliar[26])))
 			#Pedir al usuario respuesta
 			if teclas[K_a]:
-				opc = 'a'
-				if auxiliar[8] == opc:
+				opc = 1
+				if int(auxiliar[8]) == opc:
 					ficha.puntos = ficha.puntos + 1
 					print("Bien A")
 					preguntando = False
@@ -154,8 +168,8 @@ def game():
 					jugando = True
 
 			if teclas[K_b]:
-				opc = 'b'
-				if auxiliar[8] == opc:
+				opc = 2
+				if int(auxiliar[8]) == opc:
 					ficha.puntos = ficha.puntos + 1
 					print("Bien B")
 					preguntando = False
@@ -166,8 +180,8 @@ def game():
 					jugando = True
 
 			if teclas[K_c]:
-				opc = 'c'
-				if auxiliar[8] == opc:
+				opc = 3
+				if int(auxiliar[8]) == opc:
 					ficha.puntos = ficha.puntos + 1
 					print("Bien C")
 					preguntando = False
@@ -178,8 +192,9 @@ def game():
 					jugando = True
 
 			if teclas[K_d]:
-				opc = 'd'
-				if auxiliar[8] == opc:
+				opc = 4
+				"""print (opc)"""
+				if int(auxiliar[8]) == opc:
 					ficha.puntos = ficha.puntos + 1
 					print("Bien D")
 					jugando = True

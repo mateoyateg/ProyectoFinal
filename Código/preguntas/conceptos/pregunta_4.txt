@@ -1,0 +1,30 @@
+Conceptos
+¿Un evento es un...?
+
+
+a. Metodo
+b. Suceso en el sistema
+c. Programa
+d. Ninguna de las anteriores
+2
+440
+140
+540
+150
+540
+190
+
+290
+270
+
+650
+270
+
+290
+380
+
+650
+380
+
+45
+30

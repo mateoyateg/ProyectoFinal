@@ -1,0 +1,30 @@
+Diseno
+¿Cuantas sentencias debe tener
+como maximo una linea?
+
+a. 1
+b. 2
+c. 3
+d. 4
+1
+330
+110
+410
+150
+540
+190
+
+360
+270
+
+720
+270
+
+360
+380
+
+720
+380
+
+45
+45

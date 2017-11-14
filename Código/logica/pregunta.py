@@ -19,6 +19,7 @@ class Pregunta (Sprite):
 		for linea in pregunta.readlines():
 			for i in range(1):
 				arreglo.append(linea)
+		"""print (arreglo)"""
 		pregunta.close()
 		return arreglo
 		

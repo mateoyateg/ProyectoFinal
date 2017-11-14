@@ -1,0 +1,30 @@
+UML
+¿Que clase de diagrama muestra 
+la interaccion de los objetos
+entre si?
+a. Secuencia
+b. Casos de Uso
+c. Actividades
+d. Perfiles
+1
+360
+110
+410
+150
+560
+190
+
+300
+270
+
+670
+270
+
+300
+380
+
+670
+380
+
+38
+38
