@@ -33,12 +33,10 @@ class Ficha (Sprite):
 		if self.rect.y > casilla.coordenada_y:
 			self.rect.y = self.rect.y - 1
 	
+	#Compara la posicion de la ficha y la casilla
 	def comparar(self,casilla):
 		if self.rect.x == casilla.coordenada_x and self.rect.y == casilla.coordenada_y:
 			return True
 		else:
 			return False
-	
-	def correr(self):
-		self.rect.x = self.rect.x + 1
 		
