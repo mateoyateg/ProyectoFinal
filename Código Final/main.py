@@ -50,8 +50,10 @@ def game():
     
     #Contador para el estado del dado
     contador_dado = 0
-    aux = 0
-    aux2 = 0
+    dado_final = 0
+    sigue_casilla = 0
+    pos_anterior = 0
+    cont2 = 0
     
     #Al ser varias casillas, este sera un arreglo de posiciones
     casilla = [casillas.Casilla((90,440),0,0),casillas.Casilla((205,380),1,1),
@@ -72,12 +74,14 @@ def game():
     #Se define que el juego no arranque en el tablero
     jugando = False
     preguntando = False
+    tirando = False
+    ganando = False
+    
+    dado_estado = True
     
     #Variables de condiciones para el banner de la respuesta
     condic_banner = 0
     cord_banner = (0,0)
-    
-    guarda_dado = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
     
     #Ejecucion del juego
     while True:
@@ -91,6 +95,26 @@ def game():
 		
 		#Si se presiona el espacio, arranca el tablero
         if teclas[K_SPACE]:
+			
+			contador_dado = 0
+			dado_final = 0
+			sigue_casilla = 0
+			dado.valor = 0
+			ficha.puntos = 0
+			pos_anterior = 0
+			cont2 = 0
+			
+			condic_banner = 0
+			cord_banner = (0,0)
+			dado.image = dado.imagenes[0]
+			
+			jugando = False
+			preguntando = False
+			tirando = False
+			ganando = False
+
+			dado_estado = True
+			
 			jugando = True
         
         #Tablero de juego
@@ -121,84 +145,98 @@ def game():
 			#Blit del banner para la respuesta
 			screen.blit(respuesta_pregunta, cord_banner)
 			
-			#Estados y auxiliares del dado
-			"""guarda_dado=0"""
-			
-			estado_dado = 0
-			dado_final=0
-			
 			#Si se presiona la tecla 't', se tira el dado
 			
 			pygame.key.set_repeat(True)
-			guarda_dado[0] = dado.valor
 			
+			"""pos_anterior = casilla[sigue_casilla].posicion"""
+			
+			
+			
+			"""print(pos_anterior)"""
+			
+			pos_anterior = casilla[pos_anterior].numero
+			
+			while sigue_casilla > 22:
+				sigue_casilla = sigue_casilla - 1
+				dado.valor = dado.valor - 1
+			
+			ficha.update(casilla[sigue_casilla])
 			
 			for event in pygame.event.get():
 				if event.type == pygame.QUIT:
 					sys.exit()
-				elif event.type == pygame.KEYDOWN:
-					if event.key == pygame.K_t:
-						print("Buena la re gonorrea")
+				elif event.type == pygame.MOUSEBUTTONDOWN:
+					x,y = event.pos
+					
+					if dado.rect.collidepoint(x,y): 
 						contador_dado = 0
-						dado.valor = random.randint(1,6)
-						guarda_dado[0] = dado.valor
-						for i in range(0,20):
-							if guarda_dado[i]!=0:
-								guarda_dado[i] = guarda_dado[i]
-							elif guarda_dado[i] == 0:
-								guarda_dado[i] = dado.valor
+						print("Buena la re gonorrea")
+						tirando = True
+						jugando = False
+					
 						
-						dado.image = dado.imagenes[dado.valor]
-						
-				
-			for n in range(0,20):
-				for x in range(1,20):
-					dado_final = guarda_dado[n] + guarda_dado[x]
 			
-			"""dado_final = guarda_dado[0] + guarda_dado[1]"""
-			"""print (guarda_dado[0])
-			print (guarda_dado[1])"""
-			
-			"""if event.type == teclas[K_t]:
-				#Modifica el valor del dado
-				contador_dado = 0
-				aux = dado.valor
-				dado.valor = random.randint(1,6)
-				dado.image = dado.imagenes[dado.valor]
-				
-				aux2 = dado.valor
-				estado_dado = estado_dado + 1"""
+			dado.image = dado.imagenes[dado.valor]
 			
 			
+			pos_anterior = sigue_casilla
 			
-			"""dado_final = guarda_dado[0] + guarda_dado[1]"""
+			"""print(contador_dado)"""
+			"""print(pos_anterior)"""
 			
-			"""#Se actualiza la posicion de la ficha con respecto al dado
-			if estado_dado!=1:
-				dado_final=guarda_dado + dado.valor
-			else:
-				dado_final=dado_final"""
-
+			"""print(sigue_casilla)"""
+			
 			#Direcciona la ficha a la casilla del dado
-			ficha.update(casilla[dado_final])
-			
+
+
+			if ficha.comparar(casilla[sigue_casilla]) and ficha.numCasilla(casilla[sigue_casilla]) == 22:
+				print ("Ganador")
+				
+				puntos = open('puntaje.txt', 'r')
+				pts = [x[:-1] for x in puntos.readlines()]
+				puntos.close()
+				pts.append(ficha.puntos)
+				jugando = False
+				tirando = False
+				preguntando = False
+				puntos = open('puntaje.txt', 'w')
+				for x in pts:
+					puntos.write(str(x)+'\n')
+				puntos.close()
+				
+				
+				
+				
+				
+				
 			
 			#Define que tipo de casilla es donde cayo la ficha
-			nombre_pregunta = preguntas.asignarPregunta(casilla[dado_final].codigo)
-
+			nombre_pregunta = preguntas.asignarPregunta(casilla[sigue_casilla].codigo)
 			#Se muestra pregunta dependiendo la casilla y si esta no es la primera
-			if (ficha.comparar(casilla[dado_final]) and ficha.comparar(casilla[0]) == False and contador_dado != 1):
+			if (contador_dado !=1 and contador_dado !=2  and ficha.comparar(casilla[sigue_casilla]) and ficha.comparar(casilla[0]) == False and ficha.comparar(casilla[22]) == False  ):
 				preguntando = True
 				print("ede")
 				jugando = False
-				contador_dado = contador_dado + 1				
+				dado_estado = True
+							
 			
-			"""elif casilla[dado_final].numero == 22:
-				print("Ganaste")
-				break"""
 
 	#Si se entra a una pregunta			
+	elif tirando:
+		dado.valor = random.randint(1,6)
+		
+		"""while pos_anterior + dado.valor > 22:
+			dado.valor = random.randint(1,6)"""
+		
+		dado.valor = random.randint(1,6)
+		sigue_casilla = pos_anterior + dado.valor
+		tirando = False
+		jugando = True
+		preguntando = False
+	
 	elif preguntando:
+			
 			#Leer la pregunta
 			texto_pregunta = preguntas.leerPregunta(nombre_pregunta)
 			#Carga el cuadro de pregunta y el tipo de pregunta
@@ -233,12 +271,14 @@ def game():
 					ficha.puntos = ficha.puntos + 1
 					print("Bien A")
 					condic_banner = 1
+					contador_dado = contador_dado + 1
 					preguntando = False
 					jugando = True
 				else:
 					print("Error A")
 					fuente = pygame.font.Font('fuentes/fuente.ttf', 30)
 					condic_banner = 2
+					contador_dado = contador_dado + 1
 					preguntando = False
 					jugando = True
 
@@ -248,11 +288,13 @@ def game():
 					ficha.puntos = ficha.puntos + 1
 					print("Bien B")
 					condic_banner = 1
+					contador_dado = contador_dado + 1
 					preguntando = False
 					jugando = True
 				else:
 					print("Error B")
 					condic_banner = 2
+					contador_dado = contador_dado + 1
 					preguntando = False
 					jugando = True
 
@@ -262,11 +304,13 @@ def game():
 					ficha.puntos = ficha.puntos + 1
 					print("Bien C")
 					condic_banner = 1
+					contador_dado = contador_dado + 1
 					preguntando = False
 					jugando = True
 				else:
 					print("Error C")
 					condic_banner = 2
+					contador_dado = contador_dado + 1
 					preguntando = False
 					jugando = True
 
@@ -276,11 +320,13 @@ def game():
 					ficha.puntos = ficha.puntos + 1
 					print("Bien D")
 					condic_banner = 1
+					contador_dado = contador_dado + 1
 					jugando = True
 					preguntando = False
 				else:
 					print("Error D")
 					condic_banner = 2
+					contador_dado = contador_dado + 1
 					jugando = True
 					preguntando = False
 					
@@ -304,7 +350,7 @@ def game():
 			screen.blit(tux_image, (700,500))
 			
 			#Carga puntajes y los organiza
-			puntos = open('puntajes/puntaje.txt', 'r')
+			puntos = open('puntaje.txt', 'r')
 			pts = [x[:-1] for x in puntos.readlines()]
 			puntos.close()
 			ordenar(pts)
@@ -328,7 +374,7 @@ def game():
 			linea = 50
 			fuente = pygame.font.Font('fuentes/fuente.ttf', 27)
 			for x in pts[:10]:
-				if int(x) == 1:
+				if int(x) == ficha.puntos:
 					color = (255,255,0)
 				else:
 					color = (255,255,255)
