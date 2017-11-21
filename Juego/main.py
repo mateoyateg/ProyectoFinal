@@ -41,21 +41,27 @@ def game():
     #Nombra la ventana
     pygame.display.set_caption( "Juego de Mesa" )
     
+    #Pone icono a la ventana
+    icon = util.cargar_imagen('imagenes/tux_icono.png')
+    pygame.display.set_icon(icon)
+    
     #Carga la imagen del tablero
     background_image = util.cargar_imagen('imagenes/tablero.png')
+    
+    #Mensaje de bienvenida por consola
+    print("Bienvenido al Juego")
+    print ""
     
     #Crea los objetos ficha, dado & casilla
     ficha = fichas.Ficha()
     dado = dados.Dado((1120,590), (0))
     
-    #Contador para el estado del dado
-    contador_dado = 0
-    dado_final = 0
-    sigue_casilla = 0
-    pos_anterior = 0
-    cont2 = 0
+    #Inicializa contadores
+    contador_dado = 0 #Guarda el estado del dado
+    sigue_casilla = 0 #Calcula la siguiente casilla
+    pos_anterior = 0 #Guarda la casilla actual
     
-    #Al ser varias casillas, este sera un arreglo de posiciones
+    #Al ser varias casillas, este sera un arreglo de posiciones de casillas
     casilla = [casillas.Casilla((90,440),0,0),casillas.Casilla((205,380),1,1),
 			   casillas.Casilla((260,260),2,2),casillas.Casilla((220,170),3,3),
 			   casillas.Casilla((160,75),4,4),casillas.Casilla((261,2),1,5),
@@ -71,13 +77,12 @@ def game():
 			   
     #Crea el objeto pregunta, donde se leen las mismas
     preguntas = pregunta.Pregunta()
+    
     #Se define que el juego no arranque en el tablero
     jugando = False
-    preguntando = False
     tirando = False
     ganando = False
-    
-    dado_estado = True
+    preguntando = False
     
     #Variables de condiciones para el banner de la respuesta
     condic_banner = 0
@@ -89,32 +94,52 @@ def game():
 		#Se crea el objeto teclas para leer el teclado
         teclas = pygame.key.get_pressed()
         
+        #Captura eventos en el juego
         for event in pygame.event.get():
+			
+			#Termina ejecucion del juego al pulsar el salir
 			if event.type == pygame.QUIT:
 				sys.exit() 
+			
+			#Captura si el mouse fue presionado
+			elif event.type == pygame.MOUSEBUTTONDOWN:
+				print("El Mouse fue presionado")
+				
+				#Guarda la posicion del dado
+				x,y = event.pos 
+				
+				#Comprueba si fue presionado el dado
+				if dado.rect.collidepoint(x,y):
+					print("El dado fue presionado")
+					contador_dado = 0	
+					tirando = True
+					jugando = False
 		
-		#Si se presiona el espacio, arranca el tablero
+		#Si se presiona el espacio, reinicia el tablero y arranca el juego
         if teclas[K_SPACE]:
 			
+			#Reinicia lo relacionado al dado
+			dado.image = dado.imagenes[0]
 			contador_dado = 0
-			dado_final = 0
-			sigue_casilla = 0
 			dado.valor = 0
-			ficha.puntos = 0
-			pos_anterior = 0
-			cont2 = 0
 			
+			#Reinicia puntaje de la ficha
+			ficha.puntos = 0
+			
+			#Reinicia lo relacionado a la casilla
+			sigue_casilla = 0
+			pos_anterior = 0
+			
+			#Reinicia lo relacionado al banner de pregunta
 			condic_banner = 0
 			cord_banner = (0,0)
-			dado.image = dado.imagenes[0]
 			
-			jugando = False
-			preguntando = False
+			#Reinicia estados
 			tirando = False
 			ganando = False
-
-			dado_estado = True
+			preguntando = False
 			
+			#Inicia el tablero de juego
 			jugando = True
         
         #Tablero de juego
@@ -131,7 +156,8 @@ def game():
 			screen.blit(ficha.image,ficha.rect)			
 			screen.blit(ficha_puntos, (80, 680))
 			 
-			#Definir si la respuesta fue buena o no para el banner de pregunta
+			"""Definir si la respuesta fue buena o no para el banner de pregunta
+			Si la condicion del banner arranca en 0, se muestra otro estado"""
 			if (condic_banner == 0):
 				respuesta_pregunta = fuente.render("A Jugar", 1 ,(255,255,255))
 				cord_banner = (90,595)
@@ -145,106 +171,100 @@ def game():
 			#Blit del banner para la respuesta
 			screen.blit(respuesta_pregunta, cord_banner)
 			
-			#Si se presiona la tecla 't', se tira el dado
-			
-			pygame.key.set_repeat(True)
-			
-			"""pos_anterior = casilla[sigue_casilla].posicion"""
-			
-			
-			
-			"""print(pos_anterior)"""
-			
+			#Guarda el numero de casilla actual
 			pos_anterior = casilla[pos_anterior].numero
 			
+			#Si la casilla es mayor que 22, buscar un menor numero
 			while sigue_casilla > 22:
 				sigue_casilla = sigue_casilla - 1
 				dado.valor = dado.valor - 1
 			
+			"""Realizar el update con la nueva casilla, teniendo en cuenta
+			que el dado ya habria sido lanzado, sigue_casilla fue calculado
+			al momento de lanzar"""
 			ficha.update(casilla[sigue_casilla])
 			
-			for event in pygame.event.get():
-				if event.type == pygame.QUIT:
-					sys.exit()
-				elif event.type == pygame.MOUSEBUTTONDOWN:
-					x,y = event.pos
-					
-					if dado.rect.collidepoint(x,y): 
-						contador_dado = 0
-						print("Buena la re gonorrea")
-						tirando = True
-						jugando = False
-					
-						
-			
+			#Carga la imagen del dado correspondiente
 			dado.image = dado.imagenes[dado.valor]
 			
-			
+			#Guarda la posicion de la ficha con las casillas
 			pos_anterior = sigue_casilla
 			
-			"""print(contador_dado)"""
-			"""print(pos_anterior)"""
-			
-			"""print(sigue_casilla)"""
-			
-			#Direcciona la ficha a la casilla del dado
-
-
-			if ficha.comparar(casilla[sigue_casilla]) and ficha.numCasilla(casilla[sigue_casilla]) == 22:
-				print ("Ganador")
+			#Comprueba si la ficha esta en la ultima casilla
+			if (ficha.comparar(casilla[sigue_casilla])) and (ficha.numCasilla(casilla[sigue_casilla]) == 22):
 				
+				#Imprime mensaje por consola
+				print("Juego terminado")
+				print ""
+				
+				#Abre el archivo de puntajes
 				puntos = open('puntaje.txt', 'r')
 				pts = [x[:-1] for x in puntos.readlines()]
 				puntos.close()
 				pts.append(ficha.puntos)
+				
+				"""Pone todos los estados en False para mostrar
+				la pantalla de inicio"""
 				jugando = False
 				tirando = False
 				preguntando = False
+				
+				#Escribe los puntajes con el nuevo incluido
 				puntos = open('puntaje.txt', 'w')
 				for x in pts:
 					puntos.write(str(x)+'\n')
 				puntos.close()
 				
-				
-				
-				
-				
-				
 			
-			#Define que tipo de casilla es donde cayo la ficha
+			"""Define que tipo de casilla es donde cayo la ficha y captura
+			un nombre del archivo de texto de una pregunta relacionada
+			a la casilla donde esta la ficha"""
 			nombre_pregunta = preguntas.asignarPregunta(casilla[sigue_casilla].codigo)
-			#Se muestra pregunta dependiendo la casilla y si esta no es la primera
-			if (contador_dado !=1 and contador_dado !=2  and ficha.comparar(casilla[sigue_casilla]) and ficha.comparar(casilla[0]) == False and ficha.comparar(casilla[22]) == False  ):
-				preguntando = True
-				print("ede")
-				jugando = False
-				dado_estado = True
-							
 			
+			#Se muestra pregunta dependiendo la casilla y si esta no es la primera ni la ultima
+			if (contador_dado !=1 and contador_dado !=2  and ficha.comparar(casilla[sigue_casilla]) and ficha.comparar(casilla[0]) == False 
+				and ficha.comparar(casilla[22]) == False):
+				
+				#Se ingresa al estado de pregunta
+				preguntando = True
+				
+				#Imprime mensaje por consola
+				print("A mostrar pregunta")
+				
+				#Se sale de estado de juego
+				jugando = False
 
-	#Si se entra a una pregunta			
+	#Si se tira el dado			
 	elif tirando:
+		#Asigna un dado aleatorio
 		dado.valor = random.randint(1,6)
 		
-		"""while pos_anterior + dado.valor > 22:
-			dado.valor = random.randint(1,6)"""
+		#Imprime mensaje por consola
+		print('Dado nuevo con valor:' , dado.valor)
 		
-		dado.valor = random.randint(1,6)
+		#Calcula la casilla proxima
 		sigue_casilla = pos_anterior + dado.valor
+		
+		#Sale del estao de tirando y preguntando
 		tirando = False
-		jugando = True
 		preguntando = False
-	
+		
+		#Vuelve al estado de juego
+		jugando = True
+		
+	#Si se entra a una pregunta
 	elif preguntando:
 			
 			#Leer la pregunta
 			texto_pregunta = preguntas.leerPregunta(nombre_pregunta)
+			
 			#Carga el cuadro de pregunta y el tipo de pregunta
 			cuadro_image = util.cargar_imagen('preguntas/cuadro.png')
 			fuente = pygame.font.Font('fuentes/fuente.ttf', 45)
 			tipo_pregunta = fuente.render(texto_pregunta[0][:-1],1,(1,1,1))
 			fuente = pygame.font.Font('fuentes/fuente.ttf', int(texto_pregunta[28]))
-			#Guarda las lineas de la pregunta
+			
+			#Guarda las lineas de la pregunta en variables
 			texto_1 = fuente.render(texto_pregunta[1][:-1],1,(1,1,1))
 			texto_2 = fuente.render(texto_pregunta[2][:-1],1,(1,1,1))
 			texto_3 = fuente.render(texto_pregunta[3][:-1],1,(1,1,1))
@@ -253,7 +273,9 @@ def game():
 			opc_b = fuente.render(texto_pregunta[5][:-1],1,(1,1,1))
 			opc_c = fuente.render(texto_pregunta[6][:-1],1,(1,1,1))
 			opc_d = fuente.render(texto_pregunta[7][:-1],1,(1,1,1))
-			#Se hace un blit de la pregunta
+			
+			"""Se hace un blit de la pregunta con las propiedades de la misma, 
+			usando las que se encuentran escritas en cada archivo de texto"""
 			screen.blit(cuadro_image,(220,45))
 			screen.blit(tipo_pregunta,(240,65))
 			screen.blit(texto_1,(int(texto_pregunta[9]),int(texto_pregunta[10])))
@@ -265,68 +287,135 @@ def game():
 			screen.blit(opc_d,(int(texto_pregunta[25]),int(texto_pregunta[26])))
 			
 			#El usuario ingresa respuesta por medio del teclado
+			#Si la opcion ingresada es la 'a'
 			if teclas[K_a]:
 				opc = 1
+				
+				#Si la opc. ingresada 'a' coincide con la real
 				if int(texto_pregunta[8]) == opc:
 					ficha.puntos = ficha.puntos + 1
-					print("Bien A")
+					
+					#Imprime mensaje por consola
+					print("Opcion (A) correcta")
+					
+					#Se muestra el banner de respuesta correcta
 					condic_banner = 1
 					contador_dado = contador_dado + 1
+					
+					#Sale de la pregunta y vuelve al tablero de juego
 					preguntando = False
 					jugando = True
+				
+				#Si la opc. ingresada 'a' no es la correcta
 				else:
-					print("Error A")
-					fuente = pygame.font.Font('fuentes/fuente.ttf', 30)
+					
+					#Imprime mensaje por consola
+					print("Opcion (A) incorrecta")
+					
+					#Carga el banner de respuesta erronea
 					condic_banner = 2
 					contador_dado = contador_dado + 1
+					
+					#Sale de la pregunta y vuelve al tablero de juego
 					preguntando = False
 					jugando = True
 
+			#Si la opcion ingresada es la 'b'
 			if teclas[K_b]:
 				opc = 2
+				
+				#Si la opc. ingresada 'b' coincide con la real
 				if int(texto_pregunta[8]) == opc:
 					ficha.puntos = ficha.puntos + 1
-					print("Bien B")
+					
+					#Imprime mensaje por consola
+					print("Opcion (B) correcta")
+					
+					#Se muestra el banner de respuesta correcta
 					condic_banner = 1
 					contador_dado = contador_dado + 1
+					
+					#Sale de la pregunta y vuelve al tablero de juego
 					preguntando = False
 					jugando = True
+				
+				#Si la opc. ingresada 'b' no es la correcta
 				else:
-					print("Error B")
+					
+					#Imprime mensaje por consola
+					print("Opcion (B) incorrecta")
+					
+					#Carga el banner de respuesta erronea
 					condic_banner = 2
 					contador_dado = contador_dado + 1
+					
+					#Sale de la pregunta y vuelve al tablero de juego
 					preguntando = False
 					jugando = True
 
+			#Si la opcion ingresada es la 'c'
 			if teclas[K_c]:
 				opc = 3
+				
+				#Si la opc. ingresada 'c' coincide con la real
 				if int(texto_pregunta[8]) == opc:
 					ficha.puntos = ficha.puntos + 1
-					print("Bien C")
+					
+					#Imprime mensaje por consola
+					print("Opcion (C) correcta")
+					
+					#Se muestra el banner de respuesta correcta
 					condic_banner = 1
 					contador_dado = contador_dado + 1
+					
+					#Sale de la pregunta y vuelve al tablero de juego
 					preguntando = False
 					jugando = True
+				
+				#Si la opc. ingresada 'c' no es la correcta
 				else:
-					print("Error C")
+					
+					#Imprime mensaje por consola
+					print("Opcion (C) incorrecta")
+					
+					#Carga el banner de respuesta erronea
 					condic_banner = 2
 					contador_dado = contador_dado + 1
+					
+					#Sale de la pregunta y vuelve al tablero de juego
 					preguntando = False
 					jugando = True
 
+			#Si la opcion ingresada es la 'd'
 			if teclas[K_d]:
 				opc = 4
+				
+				#Si la opc. ingresada 'd' coincide con la real
 				if int(texto_pregunta[8]) == opc:
 					ficha.puntos = ficha.puntos + 1
-					print("Bien D")
+					
+					#Imprime mensaje por consola
+					print("Opcion (D) correcta")
+					
+					#Se muestra el banner de respuesta correcta
 					condic_banner = 1
 					contador_dado = contador_dado + 1
+					
+					#Sale de la pregunta y vuelve al tablero de juego
 					jugando = True
 					preguntando = False
+				
+				#Si la opc. ingresada 'd' no es la correcta
 				else:
-					print("Error D")
+					
+					#Imprime mensaje por consola
+					print("Opcion (D) incorrecta")
+					
+					#Carga el banner de respuesta erronea
 					condic_banner = 2
 					contador_dado = contador_dado + 1
+					
+					#Sale de la pregunta y vuelve al tablero de juego
 					jugando = True
 					preguntando = False
 					
@@ -349,7 +438,7 @@ def game():
 			screen.blit(conceptos_image, (640, 90))
 			screen.blit(tux_image, (700,500))
 			
-			#Carga puntajes y los organiza
+			#Carga los puntajes y los organiza
 			puntos = open('puntaje.txt', 'r')
 			pts = [x[:-1] for x in puntos.readlines()]
 			puntos.close()
@@ -365,7 +454,7 @@ def game():
 			texto_espacio = fuente.render("Pulse espacio para continuar...", 1 ,(255,255,255))
 			screen.blit(texto_espacio, (350, 400))
 			
-			#Carga y mmuestra el banner de mejores puntajes
+			#Carga y muestra el banner de mejores puntajes
 			fuente = pygame.font.Font('fuentes/fuente.ttf', 30)
 			texto_puntos = fuente.render("Mejores puntajes: ", 1, (255, 255, 255))
 			screen.blit(texto_puntos, (50, 550))
