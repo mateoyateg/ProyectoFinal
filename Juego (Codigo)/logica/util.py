@@ -8,7 +8,3 @@ def cargar_imagen(nombre, optimizar=False):
         return imagen.convert()
     else:
         return imagen.convert_alpha()
-
-#Metodo para cargar sonidos
-def cargar_sonido(nombre):
-    return pygame.mixer.Sound(nombre)
