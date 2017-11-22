@@ -1,0 +1,30 @@
+Diseno
+¿En cuanto a metodos, la primera letra
+diferente a la primera debe ser?
+
+a. CamelCase
+b. Minusculas
+c. Mayusculas
+d. No debe importar
+3
+280
+110
+360
+150
+490
+190
+
+300
+270
+
+660
+270
+
+300
+380
+
+660
+380
+
+45
+45

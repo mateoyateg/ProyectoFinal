@@ -37,7 +37,7 @@ class Pregunta (Sprite):
 				return ('preguntas/uml/pregunta_5.txt')
 		#Diseno
 		elif cod == 2:
-			aux = randint(1,5)
+			aux = randint(1,10)
 			if aux == 1:
 				return ('preguntas/diseno/pregunta_1.txt')
 			elif aux == 2:
@@ -48,9 +48,20 @@ class Pregunta (Sprite):
 				return ('preguntas/diseno/pregunta_4.txt')
 			elif aux == 5:
 				return ('preguntas/diseno/pregunta_5.txt')
+			elif aux == 6:
+				return ('preguntas/diseno/pregunta_6.txt')
+			elif aux == 7:
+				return ('preguntas/diseno/pregunta_7.txt')
+			elif aux == 8:
+				return ('preguntas/diseno/pregunta_8.txt')
+			elif aux == 9:
+				return ('preguntas/diseno/pregunta_9.txt')
+			elif aux == 10:
+				return ('preguntas/diseno/pregunta_10.txt')
+		
 		#Conceptos		
 		elif cod == 3:
-			aux = randint(1,5)
+			aux = randint(1,8)
 			if aux == 1:
 				return ('preguntas/conceptos/pregunta_1.txt')
 			elif aux == 2:
@@ -61,6 +72,16 @@ class Pregunta (Sprite):
 				return ('preguntas/conceptos/pregunta_4.txt')
 			elif aux == 5:
 				return ('preguntas/conceptos/pregunta_5.txt')
+			elif aux == 6:
+				return ('preguntas/conceptos/pregunta_6.txt')
+			elif aux == 7:
+				return ('preguntas/conceptos/pregunta_7.txt')
+			elif aux == 8:
+				return ('preguntas/conceptos/pregunta_8.txt')
+			"""elif aux == 9:
+				return ('preguntas/conceptos/pregunta_9.txt')
+			elif aux == 10:
+				return ('preguntas/conceptos/pregunta_10.txt')"""
 
 		#Historia
 		elif cod == 4:

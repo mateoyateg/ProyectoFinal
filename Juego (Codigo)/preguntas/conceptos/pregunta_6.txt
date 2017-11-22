@@ -1,0 +1,30 @@
+Conceptos
+¿Que elementos conforman una variable?
+
+
+a. Espacio de memoria
+b. Nombre
+c. Contenido
+d. Todas de las anteriores
+4
+270
+140
+540
+150
+540
+190
+
+250
+270
+
+700
+270
+
+290
+380
+
+650
+380
+
+45
+35
