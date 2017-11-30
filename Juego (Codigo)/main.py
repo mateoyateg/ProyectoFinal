@@ -240,7 +240,7 @@ def game():
 		dado.valor = random.randint(1,6)
 		
 		#Imprime mensaje por consola
-		print('Dado nuevo con valor:' , dado.valor)
+		print 'Dado nuevo con valor:' , dado.valor
 		
 		#Calcula la casilla proxima
 		sigue_casilla = pos_anterior + dado.valor

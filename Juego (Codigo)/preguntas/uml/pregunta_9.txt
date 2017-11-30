@@ -1,0 +1,30 @@
+UML
+¿Que diagrama muestra el
+comportamiento de
+los objetos?
+a. Estructura compuesta
+b. Perfiles
+c. Maquina 
+d. Tiempos
+3
+400
+110
+465
+150
+530
+190
+
+250
+270
+
+730
+270
+
+250
+380
+
+730
+380
+
+45
+45

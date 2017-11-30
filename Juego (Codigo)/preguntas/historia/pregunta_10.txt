@@ -1,0 +1,30 @@
+Historia
+¿Por que Java es considerado el mejor
+lenguaje para trabajar IDLEs
+en la programacion OO?
+a. La facilidad de programar
+b. La facilidad de clases
+c. El uso de la interfaz grafica
+d. El uso de la maquina virtual Java
+4
+300
+110
+360
+150
+430
+190
+
+230
+270
+
+650
+270
+
+230
+380
+
+620
+380
+
+45
+30

@@ -1,0 +1,30 @@
+UML
+¿Que diagrama muestra el hardware
+y software del sistema?
+
+a. Diagrama de despliegue
+b. Casos de uso
+c. Estructura de objetos
+d. Componente
+1
+300
+100
+410
+150
+540
+190
+
+230
+270
+
+720
+270
+
+230
+380
+
+720
+380
+
+45
+45

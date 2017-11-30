@@ -1,0 +1,30 @@
+UML
+¿Que diagrama muestra la estructura
+interna de una clase?
+
+a. Perfiles
+b. Paquetes
+c. Estructura compuesta
+d. Actividades
+1
+300
+100
+410
+150
+540
+190
+
+250
+270
+
+730
+270
+
+250
+380
+
+730
+380
+
+45
+45
