@@ -1,0 +1,30 @@
+Diseño
+En Python, ¿cual sentencia se debe
+usar en lugar de la
+de asignacion?
+a. self
+b. def
+c. into
+d. out
+2
+300
+120
+450
+160
+480
+200
+
+360
+270
+
+720
+270
+
+360
+380
+
+720
+380
+
+45
+45

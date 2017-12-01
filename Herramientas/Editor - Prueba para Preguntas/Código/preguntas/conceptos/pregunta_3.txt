@@ -1,0 +1,30 @@
+Conceptos / Caracteristicas
+
+¿La herencia es cuando una clase es...?
+
+a. Descarga archivos
+b. Adquiere propiedades de otra
+c. Refiere a otra clase
+d. Ninguna de las anteriores
+2
+270
+140
+270
+140
+540
+190
+
+240
+270
+
+650
+270
+
+240
+380
+
+650
+380
+
+45
+30

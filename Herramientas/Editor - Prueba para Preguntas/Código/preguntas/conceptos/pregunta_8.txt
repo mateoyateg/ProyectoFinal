@@ -1,0 +1,30 @@
+Conceptos / Caracteristicas
+¿Un metodo es un algoritmo
+asociado a..?
+
+a. Un objeto
+b. Un metodo
+c. Una variable
+d. Un evento
+1
+380
+130
+510
+170
+540
+190
+
+280
+270
+
+630
+270
+
+280
+380
+
+630
+380
+
+40
+40

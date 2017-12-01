@@ -1,0 +1,30 @@
+Diseño
+¿Los nombres de constantes deben ser
+escritas siguiendo...?
+
+a. CamelCase
+b. Mayusculas
+c. Minusculas
+d. Numero
+2
+330
+130
+460
+170
+540
+190
+
+280
+270
+
+670
+270
+
+280
+380
+
+670
+380
+
+38
+38

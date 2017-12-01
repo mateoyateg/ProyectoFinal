@@ -1,0 +1,30 @@
+UML
+¿Que clase de diagrama muestra
+la interaccion con el usuario?
+
+a. Secuencia
+b. Casos de Uso
+c. Actividades
+d. Perfiles
+2
+360
+140
+410
+180
+560
+190
+
+300
+270
+
+670
+270
+
+300
+380
+
+670
+380
+
+38
+38

@@ -1,0 +1,30 @@
+Conceptos / Caracteristicas
+La modularidad es la propiedad que
+permite _________ una aplicacion
+en partes ___ _______
+a. agrandar / mas grandes
+b. subdividir / mas pequeñas
+c. transformar / muy iguales
+d. encapsular / mas pequeñas
+2
+350
+130
+370
+170
+470
+210
+
+260
+270
+
+660
+270
+
+260
+380
+
+660
+380
+
+35
+30

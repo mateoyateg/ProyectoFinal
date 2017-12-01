@@ -1,0 +1,30 @@
+Historia
+¿Cual es IDLE en que mayormente
+se ha desarrollado la 
+teoria de la POO?
+a. Smalltalk
+b. Simula67
+c. NeatBeans
+d. Eclipse
+1
+360
+120
+460
+160
+485
+200
+
+300
+270
+
+670
+270
+
+300
+380
+
+670
+380
+
+38
+38

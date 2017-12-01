@@ -24,7 +24,7 @@ class Pregunta (Sprite):
 	def asignarPregunta(self,cod):
 		#UML
 		if cod == 1:
-			aux = randint(1,10)
+			aux = randint(1,15)
 			if aux == 1:
 				return ('preguntas/uml/pregunta_1.txt')
 			elif aux == 2:
@@ -45,6 +45,16 @@ class Pregunta (Sprite):
 				return ('preguntas/uml/pregunta_9.txt')
 			elif aux == 10:
 				return ('preguntas/uml/pregunta_10.txt')
+			elif aux == 11:
+				return ('preguntas/uml/pregunta_11.txt')
+			elif aux == 12:
+				return ('preguntas/uml/pregunta_12.txt')
+			elif aux == 13:
+				return ('preguntas/uml/pregunta_13.txt')
+			elif aux == 14:
+				return ('preguntas/uml/pregunta_14.txt')
+			elif aux == 15:
+				return ('preguntas/uml/pregunta_15.txt')
 		#Diseno
 		elif cod == 2:
 			aux = randint(1,16)
@@ -117,7 +127,7 @@ class Pregunta (Sprite):
 
 		#Historia
 		elif cod == 4:
-			aux = randint(1,10)
+			aux = randint(1,15)
 			if aux == 1:
 				return ('preguntas/historia/pregunta_1.txt')
 			elif aux == 2:
@@ -138,3 +148,13 @@ class Pregunta (Sprite):
 				return ('preguntas/historia/pregunta_9.txt')
 			elif aux == 10:
 				return ('preguntas/historia/pregunta_10.txt')
+			elif aux == 11:
+				return ('preguntas/historia/pregunta_11.txt')
+			elif aux == 12:
+				return ('preguntas/historia/pregunta_12.txt')
+			elif aux == 13:
+				return ('preguntas/historia/pregunta_13.txt')
+			elif aux == 14:
+				return ('preguntas/historia/pregunta_14.txt')
+			elif aux == 15:
+				return ('preguntas/historia/pregunta_15.txt')

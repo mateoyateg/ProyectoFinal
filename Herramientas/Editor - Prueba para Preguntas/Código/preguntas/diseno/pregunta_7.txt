@@ -1,0 +1,30 @@
+Diseño
+
+¿Cuando se deben usar espacios en blanco?
+
+a. Entre palabra clave y parentesis
+b. En un listado de argumentos
+c. Para separar un operador binario
+d. Todas las anteriores
+4
+270
+130
+270
+130
+540
+190
+
+240
+270
+
+690
+270
+
+240
+380
+
+690
+380
+
+40
+25

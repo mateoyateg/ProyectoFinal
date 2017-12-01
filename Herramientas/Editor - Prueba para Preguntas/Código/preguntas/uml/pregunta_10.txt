@@ -1,0 +1,30 @@
+UML
+¿Que diagrama representa los
+mensajes pasados
+entre objetos?
+a. Estructura compuesta
+b. Comunicacion
+c. Maquina
+d. Tiempos
+2
+350
+120
+465
+160
+490
+200
+
+250
+270
+
+730
+270
+
+350
+380
+
+750
+380
+
+45
+40

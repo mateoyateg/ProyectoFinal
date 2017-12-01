@@ -1,0 +1,30 @@
+Historia
+¿Cual es el principio
+de Liskov?
+
+a. Codigo permite extension
+b. Reutilizacion del codigo
+c. Los objetos son remplazables
+d. Depende de abstracciones
+3
+430
+130
+540
+170
+540
+190
+
+240
+270
+
+690
+270
+
+240
+380
+
+690
+380
+
+45
+30

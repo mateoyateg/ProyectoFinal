@@ -1,0 +1,30 @@
+Historia
+¿Primer IDLE en soportar la Programacion
+Orientada a
+Objetos?
+a. Java
+b. Simula67
+c. Python
+d. C++
+2
+250
+120
+510
+160
+540
+200
+
+330
+270
+
+670
+270
+
+300
+380
+
+690
+380
+
+45
+45

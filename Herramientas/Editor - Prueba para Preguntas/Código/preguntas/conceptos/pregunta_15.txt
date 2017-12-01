@@ -1,0 +1,30 @@
+Conceptos / Caracteristicas
+¿Cual de los siguientes es un
+tipo de herencia?
+
+a. Por graduacion
+b. Por generalizacion
+c. Por encapsulamiento
+d. Por discrecion
+2
+380
+130
+480
+170
+480
+190
+
+320
+270
+
+680
+270
+
+280
+380
+
+720
+380
+
+45
+35

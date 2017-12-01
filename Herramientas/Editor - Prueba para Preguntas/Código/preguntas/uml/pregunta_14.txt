@@ -1,0 +1,30 @@
+UML
+¿Que digrama muestra
+el comportamiento
+de los objetos?
+a. Tiempos
+b. Secuencia
+c. Actividades
+d. Perfiles
+1
+400
+110
+435
+150
+475
+190
+
+270
+270
+
+730
+270
+
+250
+380
+
+730
+380
+
+45
+45

@@ -1,0 +1,30 @@
+Diseño
+¿Cuales de los siguientes NO deben ser
+usados como nombres de variables,
+segun el PEP8?
+a. l (L en minuscula)
+b. O (O en mayuscula)
+c. a (A en minuscula)
+d. a y b
+4
+280
+120
+330
+160
+490
+200
+
+300
+270
+
+660
+270
+
+300
+380
+
+750
+380
+
+45
+35

@@ -1,0 +1,30 @@
+Diseño
+
+¿En las clases, la primera letra debe ser...?
+
+a. Minusculas
+b. Mayusculas
+c. No debe importar
+d. Un numero
+2
+310
+130
+310
+130
+540
+190
+
+300
+270
+
+670
+270
+
+280
+380
+
+670
+380
+
+38
+38

@@ -1,0 +1,30 @@
+UML
+¿Que diagrama muestra la dependencia
+de los paquetes?
+
+a. Secuencia
+b. Paquetes
+c. Casos de uso
+d. Clases
+2
+300
+120
+490
+170
+540
+190
+
+250
+270
+
+730
+270
+
+250
+380
+
+730
+380
+
+45
+45

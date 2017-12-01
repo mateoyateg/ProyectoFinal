@@ -1,0 +1,30 @@
+Diseño
+En Python, ¿se deben mezclar espacios
+y tabulaciones? (En
+identaciones)
+a. Si
+b. No debe importar
+c. No
+d. Ninguna de las anteriores
+3
+260
+120
+460
+160
+490
+200
+
+360
+270
+
+600
+270
+
+360
+380
+
+550
+380
+
+45
+40

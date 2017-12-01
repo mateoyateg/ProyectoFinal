@@ -1,0 +1,30 @@
+Conceptos / Caracteristicas
+La cohesion se refiere al grado en que
+los elementos de un modulo...
+
+a. Permanecen juntos
+b. Se separan
+c. Se combinan
+d. Se destruyen
+1
+340
+130
+400
+170
+540
+190
+
+280
+270
+
+720
+270
+
+340
+380
+
+700
+380
+
+40
+35

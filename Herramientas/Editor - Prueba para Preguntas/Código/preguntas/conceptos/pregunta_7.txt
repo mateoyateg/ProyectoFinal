@@ -1,0 +1,30 @@
+Conceptos / Caracteristicas
+¿Cuales de los siguientes son niveles
+de encapsulamiento?
+
+a. Setter
+b. Getter
+c. Invisible
+d. Ninguno de las anteriores
+4
+340
+130
+450
+170
+540
+190
+
+280
+270
+
+700
+270
+
+280
+380
+
+600
+380
+
+40
+35

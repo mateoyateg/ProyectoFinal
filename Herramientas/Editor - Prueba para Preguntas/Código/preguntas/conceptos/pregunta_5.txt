@@ -1,0 +1,30 @@
+Conceptos / Caracteristicas
+
+¿Un metodo puede tener retorno?
+
+a. No
+b. Si y no
+c. Si
+d. Ninguna de las anteriores
+2
+315
+140
+315
+140
+540
+190
+
+360
+270
+
+760
+270
+
+360
+380
+
+650
+380
+
+45
+30

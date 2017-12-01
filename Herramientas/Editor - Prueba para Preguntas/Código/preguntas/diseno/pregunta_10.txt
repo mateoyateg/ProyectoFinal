@@ -1,0 +1,30 @@
+Diseño
+¿En cuanto a documentacion, cuando se debe
+usar el comentario FIXME en Java
+(Respecto a bloque de codigo)?
+a. El bloque no funciona
+b. Se debe borrar el bloque
+c. FIXME no esta en Java
+d. El bloque funciona bien
+1
+280
+120
+370
+160
+400
+200
+
+300
+270
+
+660
+270
+
+300
+380
+
+660
+380
+
+35
+30

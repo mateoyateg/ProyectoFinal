@@ -1,0 +1,30 @@
+Conceptos / Caracteristicas
+Un recolector de basura es un mecanismo
+implicito de...
+
+a. Gestion de CPU
+b. Gestion de memoria
+c. Uso de disco duro
+d. a y b
+2
+260
+130
+500
+170
+540
+190
+
+280
+270
+
+660
+270
+
+280
+380
+
+790
+380
+
+45
+38
