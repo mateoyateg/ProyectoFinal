@@ -1,0 +1,30 @@
+Conceptos
+El principio de ocultacion dice que
+cada objeto esta...
+
+a. Aislado del exterior
+b. Aislado del programa
+c. Publico
+d. Encapsulado en otro
+1
+320
+110
+450
+150
+540
+190
+
+280
+270
+
+660
+270
+
+360
+380
+
+660
+380
+
+45
+35

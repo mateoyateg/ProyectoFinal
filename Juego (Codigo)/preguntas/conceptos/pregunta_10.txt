@@ -1,0 +1,30 @@
+Conceptos
+¿Que tipo(s) de acoplamiento existen
+en la programacion OO?
+
+a. De subclases
+b. De datos
+c. Temporal
+d. a y c
+4
+300
+110
+400
+150
+540
+190
+
+280
+270
+
+660
+270
+
+300
+380
+
+690
+380
+
+45
+45

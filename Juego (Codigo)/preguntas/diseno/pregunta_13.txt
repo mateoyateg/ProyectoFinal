@@ -1,0 +1,30 @@
+Diseno
+En Python, ¿las importaciones deben
+estar en lineas diferentes?
+
+a. Si
+b. No debe importar
+c. No
+d. No, con punto y coma
+1
+300
+110
+390
+150
+540
+190
+
+360
+270
+
+600
+270
+
+360
+380
+
+550
+380
+
+45
+40

@@ -1,0 +1,30 @@
+Diseno
+¿Cuantos caracteres son los recomendados
+para limitar un comentario
+en Python?
+a. 79
+b. 80
+c. 72
+d. 100
+3
+240
+110
+400
+150
+520
+190
+
+360
+270
+
+720
+270
+
+360
+380
+
+720
+380
+
+45
+45

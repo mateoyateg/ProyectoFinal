@@ -1,0 +1,30 @@
+Conceptos
+¿Cual de los siguientes NO es un
+concepto basico de Programacion
+Orientada a Objetos?
+a. Clase
+b. Instancia
+c. Secuencia
+d. Objeto
+3
+360
+110
+350
+150
+450
+190
+
+330
+270
+
+710
+270
+
+310
+380
+
+710
+380
+
+40
+38
