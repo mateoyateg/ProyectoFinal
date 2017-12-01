@@ -1,4 +1,4 @@
-Conceptos
+Conceptos / Caracteristicas
 ¿Cuales de los siguientes son niveles
 de encapsulamiento?
 
@@ -8,9 +8,9 @@ c. Invisible
 d. Ninguno de las anteriores
 4
 340
-110
+130
 450
-150
+170
 540
 190
 

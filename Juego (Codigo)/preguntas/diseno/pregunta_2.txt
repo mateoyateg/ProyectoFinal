@@ -1,4 +1,4 @@
-Diseno
+Diseño
 ¿Cuantas sentencias debe tener
 como maximo una linea?
 
@@ -8,9 +8,9 @@ c. 3
 d. 4
 1
 330
-110
+130
 410
-150
+170
 540
 190
 

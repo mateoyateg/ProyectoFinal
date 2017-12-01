@@ -1,6 +1,6 @@
 UML
-¿Cuantos tipos de diagramas hay?
 
+¿Cuantos tipos de diagramas hay?
 
 a. 3
 b. 4
@@ -9,8 +9,8 @@ d. 2
 1
 310
 130
-410
-150
+310
+130
 540
 190
 

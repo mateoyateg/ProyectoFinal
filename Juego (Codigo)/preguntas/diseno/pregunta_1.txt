@@ -1,4 +1,4 @@
-Diseno
+Diseño
 ¿Cuantos caracteres se establecen para
 la sangria del codigo
 en Java?
@@ -8,11 +8,11 @@ c. 4
 d. 8
 3
 260
-110
+120
 410
-150
+160
 540
-190
+200
 
 360
 270

@@ -8,16 +8,16 @@ c. El uso de la interfaz grafica
 d. El uso de la maquina virtual Java
 4
 300
-110
-360
-150
+120
+400
+160
 430
-190
+200
 
-230
+250
 270
 
-650
+670
 270
 
 230
@@ -26,5 +26,5 @@ d. El uso de la maquina virtual Java
 620
 380
 
-45
+40
 30

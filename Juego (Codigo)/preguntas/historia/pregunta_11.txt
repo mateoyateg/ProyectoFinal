@@ -1,0 +1,30 @@
+Historia
+¿Cual fue el IDLE que inicio el auge 
+de la POO en el año 1980?
+
+a. C#
+b. Simula67
+c. C++
+d. NeatBeans
+3
+350
+130
+410
+170
+560
+190
+
+300
+270
+
+670
+270
+
+300
+380
+
+670
+380
+
+38
+38

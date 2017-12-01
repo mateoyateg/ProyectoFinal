@@ -1,4 +1,4 @@
-Diseno
+Diseño
 ¿En cuanto a metodos, la primera letra
 diferente a la primera debe ser?
 
@@ -8,9 +8,9 @@ c. Mayusculas
 d. No debe importar
 3
 280
-110
+130
 360
-150
+170
 490
 190
 

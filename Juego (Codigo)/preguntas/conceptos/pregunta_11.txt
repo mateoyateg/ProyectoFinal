@@ -1,4 +1,4 @@
-Conceptos
+Conceptos / Caracteristicas
 Un recolector de basura es un mecanismo
 implicito de...
 
@@ -8,9 +8,9 @@ c. Uso de disco duro
 d. a y b
 2
 260
-110
+130
 500
-150
+170
 540
 190
 

@@ -1,4 +1,4 @@
-Conceptos
+Conceptos / Caracteristicas
 ¿Que tipo(s) de acoplamiento existen
 en la programacion OO?
 
@@ -8,9 +8,9 @@ c. Temporal
 d. a y c
 4
 300
-110
+130
 400
-150
+170
 540
 190
 

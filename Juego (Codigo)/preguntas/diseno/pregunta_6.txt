@@ -1,4 +1,4 @@
-Diseno
+Diseño
 ¿Para visualizacion e impresion, cuantos
 caracteres debe tener maximo
 una linea en Java?
@@ -8,11 +8,11 @@ c. 50
 d. 90
 2
 260
-110
+120
 360
-150
+160
 490
-190
+200
 
 360
 270

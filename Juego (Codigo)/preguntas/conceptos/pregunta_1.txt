@@ -1,4 +1,4 @@
-Conceptos
+Conceptos / Caracteristicas
 ¿Cual o cuales de las siguientes
 palabras componen un objeto?
 
@@ -8,9 +8,9 @@ c. Estado
 d. Todas las anteriores
 4
 340
-110
+130
 360
-150
+170
 540
 190
 
@@ -26,5 +26,5 @@ d. Todas las anteriores
 630
 380
 
-45
-45
+40
+40

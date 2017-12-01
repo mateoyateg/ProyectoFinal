@@ -1,4 +1,4 @@
-Conceptos
+Conceptos / Caracteristicas
 El principio de ocultacion dice que
 cada objeto esta...
 
@@ -8,9 +8,9 @@ c. Publico
 d. Encapsulado en otro
 1
 320
-110
+130
 450
-150
+170
 540
 190
 

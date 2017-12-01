@@ -1,6 +1,6 @@
 UML
-¿En que ano se creo el lenguaje UML?
 
+¿En que año se creo el lenguaje UML?
 
 a. 1994
 b. 1993
@@ -9,8 +9,8 @@ d. 1995
 4
 280
 130
-410
-150
+280
+130
 540
 190
 

@@ -1,6 +1,6 @@
 Historia
-¿Que es Simula 67?
 
+¿Que es Simula 67?
 
 a. Un IDLE de programacion
 b. Un simulador
@@ -9,8 +9,8 @@ d. Un paradigma
 2
 465
 130
-540
-150
+465
+130
 540
 190
 

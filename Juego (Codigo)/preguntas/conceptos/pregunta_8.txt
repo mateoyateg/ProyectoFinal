@@ -1,4 +1,4 @@
-Conceptos
+Conceptos / Caracteristicas
 ¿Un metodo es un algoritmo
 asociado a..?
 
@@ -7,10 +7,10 @@ b. Un metodo
 c. Una variable
 d. Un evento
 1
-340
-110
-470
-150
+380
+130
+510
+170
 540
 190
 
@@ -26,5 +26,5 @@ d. Un evento
 630
 380
 
-45
-45
+40
+40

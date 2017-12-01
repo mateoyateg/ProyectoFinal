@@ -8,9 +8,9 @@ c. Los objetos son remplazables
 d. Depende de abstracciones
 3
 430
-110
+130
 540
-150
+170
 540
 190
 

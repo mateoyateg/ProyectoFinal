@@ -1,6 +1,6 @@
-Conceptos
-¿Un evento es un...?
+Conceptos / Caracteristicas
 
+¿Un evento es un...?
 
 a. Metodo
 b. Suceso en el sistema
@@ -9,8 +9,8 @@ d. Ninguna de las anteriores
 2
 440
 140
-540
-150
+440
+140
 540
 190
 

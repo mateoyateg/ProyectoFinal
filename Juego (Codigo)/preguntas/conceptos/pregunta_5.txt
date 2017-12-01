@@ -1,6 +1,6 @@
-Conceptos
-¿Un metodo puede tener retorno?
+Conceptos / Caracteristicas
 
+¿Un metodo puede tener retorno?
 
 a. No
 b. Si y no
@@ -9,8 +9,8 @@ d. Ninguna de las anteriores
 2
 315
 140
-540
-150
+315
+140
 540
 190
 

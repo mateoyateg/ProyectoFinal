@@ -2,19 +2,19 @@ UML
 ¿Que diagrama muestra la estructura
 interna de una clase?
 
-a. Perfiles
-b. Paquetes
-c. Estructura compuesta
-d. Actividades
+a. Estructura
+b. Secuencia
+c. Perfiles
+d. Despliegue
 1
 300
 120
-410
+440
 170
 540
 190
 
-340
+250
 270
 
 730
@@ -27,4 +27,4 @@ d. Actividades
 380
 
 45
-40
+45

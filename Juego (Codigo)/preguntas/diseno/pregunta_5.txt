@@ -1,4 +1,4 @@
-Diseno
+Diseño
 ¿Los nombres de constantes deben ser
 escritas siguiendo...?
 
@@ -8,9 +8,9 @@ c. Minusculas
 d. Numero
 2
 330
-110
+130
 460
-150
+170
 540
 190
 

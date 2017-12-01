@@ -1,4 +1,4 @@
-Diseno
+Diseño
 ¿En cuanto a documentacion, cuando se debe
 usar el comentario FIXME en Java
 (Respecto a bloque de codigo)?
@@ -8,11 +8,11 @@ c. FIXME no esta en Java
 d. El bloque funciona bien
 1
 280
-110
+120
 370
-150
+160
 400
-190
+200
 
 300
 270

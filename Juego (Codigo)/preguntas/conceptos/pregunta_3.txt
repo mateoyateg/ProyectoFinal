@@ -1,6 +1,6 @@
-Conceptos
-¿La herencia es cuando una clase es...?
+Conceptos / Caracteristicas
 
+¿La herencia es cuando una clase es...?
 
 a. Descarga archivos
 b. Adquiere propiedades de otra
@@ -9,8 +9,8 @@ d. Ninguna de las anteriores
 2
 270
 140
-540
-150
+270
+140
 540
 190
 

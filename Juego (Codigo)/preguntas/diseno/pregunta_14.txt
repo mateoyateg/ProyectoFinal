@@ -1,4 +1,4 @@
-Diseno
+Diseño
 ¿Cuales de los siguientes NO deben ser
 usados como nombres de variables,
 segun el PEP8?
@@ -8,11 +8,11 @@ c. a (A en minuscula)
 d. a y b
 4
 280
-110
+120
 330
-150
+160
 490
-190
+200
 
 300
 270

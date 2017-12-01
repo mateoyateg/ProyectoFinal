@@ -1,4 +1,4 @@
-Conceptos
+Conceptos / Caracteristicas
 La cohesion se refiere al grado en que
 los elementos de un modulo...
 
@@ -8,9 +8,9 @@ c. Se combinan
 d. Se destruyen
 1
 340
-110
+130
 400
-150
+170
 540
 190
 

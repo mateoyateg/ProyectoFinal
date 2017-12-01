@@ -1,6 +1,6 @@
-Diseno
-¿Con que tipo de letra se escriben los paquetes?
+Diseño
 
+¿Con que tipo de letra se escriben los paquetes?
 
 a. Todo mayusculas
 b. Todo minusculas
@@ -9,7 +9,7 @@ d. Usando CamelCase
 2
 250
 150
-410
+250
 150
 560
 190

@@ -1,6 +1,6 @@
 UML
-¿Que significa UML?
 
+¿Que significa UML?
 
 a. Unified Modeling Language
 b. Unified Model Language
@@ -9,8 +9,8 @@ d. Un Modelado Lenguage
 1
 430
 110
-540
-150
+430
+110
 540
 190
 

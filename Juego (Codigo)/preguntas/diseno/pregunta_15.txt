@@ -1,4 +1,4 @@
-Diseno
+Diseño
 Para metodos de instancia en Python,
 ¿Cual debe ser el primer
 argumento siempre?
@@ -8,11 +8,11 @@ c. vacio
 d. private
 1
 300
-110
+120
 400
-150
+160
 450
-190
+200
 
 360
 270

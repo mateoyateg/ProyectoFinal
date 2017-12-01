@@ -1,4 +1,4 @@
-Diseno
+Diseño
 En Python, ¿cual sentencia se debe
 usar en lugar de la
 de asignacion?
@@ -8,11 +8,11 @@ c. into
 d. out
 2
 300
-110
+120
 450
-150
+160
 480
-190
+200
 
 360
 270

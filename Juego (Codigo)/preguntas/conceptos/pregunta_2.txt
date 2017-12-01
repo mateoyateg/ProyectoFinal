@@ -1,6 +1,6 @@
-Conceptos
-¿Una clase es...?
+Conceptos / Caracteristicas
 
+¿Una clase es...?
 
 a. Un conjunto de objetos
 b. Un metodo
@@ -9,8 +9,8 @@ d. Un conjunto de variables
 1
 460
 140
-540
-150
+460
+140
 540
 190
 

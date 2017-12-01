@@ -1,4 +1,4 @@
-Conceptos
+Conceptos / Caracteristicas
 ¿Cual de los siguientes es un
 tipo de herencia?
 
@@ -8,9 +8,9 @@ c. Por encapsulamiento
 d. Por discrecion
 2
 380
-110
+130
 480
-150
+170
 480
 190
 

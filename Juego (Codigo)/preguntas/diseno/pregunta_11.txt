@@ -1,4 +1,4 @@
-Diseno
+Diseño
 En Python, ¿se deben mezclar espacios
 y tabulaciones? (En
 identaciones)
@@ -8,11 +8,11 @@ c. No
 d. Ninguna de las anteriores
 3
 260
-110
+120
 460
-150
+160
 490
-190
+200
 
 360
 270

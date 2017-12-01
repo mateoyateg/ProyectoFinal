@@ -8,9 +8,9 @@ c. El uso de clases
 d. La facilidad de programar
 1
 390
-110
+130
 490
-150
+170
 540
 190
 

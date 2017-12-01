@@ -1,4 +1,4 @@
-Diseno
+Diseño
 En Python, ¿las importaciones deben
 estar en lineas diferentes?
 
@@ -8,9 +8,9 @@ c. No
 d. No, con punto y coma
 1
 300
-110
+130
 390
-150
+170
 540
 190
 
